@@ -33,13 +33,12 @@ function App() {
 
   }
 
-  const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
-    repos.filter(id).forEach()
+  const handleRemoveRepo = (ident) => {
 
-    // utilizar filter.
+    const result = repos.filter(repo => repo.id !== ident)
+    
+    setRepos(result)
   }
-
 
   return (
     <Container>
